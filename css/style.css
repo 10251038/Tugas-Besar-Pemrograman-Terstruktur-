@@ -1,0 +1,219 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nav-link{
+    transition: .3s;
+}
+
+.nav-link:hover{
+    color: #ffd43b !important;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+#search{
+    width: 250px;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+#search:focus{
+    box-shadow: 0 0 0 .2rem rgba(13,110,253,.25);
+}
+
+.search-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+/* =========================
+   CARD RESEP
+========================= */
+
+.card{
+    transition: .4s;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15) !important;
+}
+
+.card img{
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card:hover img{
+    transform: scale(1.05);
+}
+
+.card-body h5{
+    font-weight: 600;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge{
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: .85rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* =========================
+   HERO SWIPER
+========================= */
+
+.heroSwiper{
+    width: 100%;
+    height: 550px;
+}
+
+.heroSwiper .swiper-slide{
+    position: relative;
+}
+
+.heroSwiper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay */
+
+.heroSwiper .swiper-slide::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.50);
+    z-index: 1;
+}
+
+/* Hero Content */
+
+.hero-content{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn{
+    padding: 12px 24px;
+}
+
+/* =========================
+   SWIPER BUTTON
+========================= */
+
+.swiper-button-next,
+.swiper-button-prev{
+    color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background: #212529;
+}
+
+footer i{
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer i:hover{
+    color: #ffc107;
+}
+
+/* =========================
+   DETAIL PAGE
+========================= */
+
+#detail-resep img{
+    border-radius: 20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .heroSwiper{
+        height: 400px;
+    }
+
+    .hero-content{
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-content h1{
+        font-size: 2.2rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    #search{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
